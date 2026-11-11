@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>官方书籍 | 东方Project 幻想乡案内</title>
+<!-- 背景音乐：放在 head 里，页面还没渲染就先起播，切页时的停顿最短 -->
+<script src="../bgm.js"></script>
+<!-- 站内搜索：索引 + 交互 -->
+<script src="../search-data.js" defer></script>
+<script src="../search.js" defer></script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ========== 页头 ========== -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand-row">
+            <div class="seal">东</div>
+            <div>
+                <div class="brand-title">东方Project 幻想乡案内</div>
+                <div class="brand-sub">Touhou Project Guide</div>
+            </div>
+            <div class="search">
+                <input id="siteSearch" type="search" placeholder="搜索作品 / 专辑 / 曲目"
+                       autocomplete="off" aria-label="站内搜索">
+                <div class="search-panel" id="searchPanel" hidden>
+                    <ul id="searchResults"></ul>
+                </div>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../web/games.html">弹幕射击游戏</a></li>
+        <li><a href="../web/musiccd.html">秘封俱乐部音乐CD</a></li>
+        <li><a href="../web/books.html" class="current">官方书籍</a></li>
+        <li><a href="../web/doujin.html">同人作品</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="page-title">
+    <h1>官方书籍出版物</h1>
+    <p>OFFICIAL BOOKS · 精选 11 部</p>
+</div>
+
+<main id="top">
+    <div class="container">
+        <p class="crumb"><a href="../index.html">首页</a> &gt; 官方书籍</p>
+
+        <div class="note">
+            官方书籍大体分为四类：设定资料集、Fanbook 与画集、官方漫画、官方杂志。
+            它们大多由 ZUN 监修或撰写文字，是了解幻想乡设定与角色日常的重要资料。
+            本页从众多出版物中精选 11 部代表作。
+        </div>
+
+        <!-- 本页目录 -->
+        <nav class="toc">
+            <h2>本页目录</h2>
+            <ul>
+                <li><a href="#g-bk02">设定资料集</a></li>
+                <li><a href="#g-bk01">Fanbook 与画集</a></li>
+                <li><a href="#g-bk06">官方漫画</a></li>
+                <li><a href="#g-bk10">官方杂志</a></li>
+            </ul>
+        </nav>
+
+        <section class="section" id="g-bk02">
+            <div class="section-head">
+                <h2>设定资料集</h2>
+                <span class="kana">Data Books</span>
+            </div>
+            <div class="books">
+        <div class="book" id="bk02">
+            <img src="../image/bk02.jpg" alt="《东方求闻史纪》封面">
+            <div>
+                <h3>东方求闻史纪</h3>
+                <div class="book-en">Perfect Memento in Strict Sense.</div>
+                <div class="book-meta">2006年12月27日 · 一迅社 · 设定资料集</div>
+                <p>由稗田阿求以「幻想乡缘起」的体例撰写，系统介绍幻想乡的妖怪、地点与历史，是系列最重要的设定集之一。</p>
+            </div>
+        </div>
+        <div class="book" id="bk05">
+            <img src="../image/bk05.jpg" alt="《东方求闻口授》封面">
+            <div>
+                <h3>东方求闻口授</h3>
+                <div class="book-en">Symposium of Post-mysticism.</div>
+                <div class="book-meta">2012年4月27日 · 一迅社 · 设定资料集</div>
+                <p>《求闻史纪》的续篇，以「口授」的形式补充新角色与新设定，由多位角色参与讨论。</p>
+            </div>
+        </div>
+        <div class="book" id="bk11">
+            <img src="../image/bk11.jpg" alt="《东方文果真报》封面">
+            <div>
+                <h3>东方文果真报</h3>
+                <div class="book-en">Alternative Facts in Eastern Utopia.</div>
+                <div class="book-meta">2017年3月30日 · 角川集团 · 设定集</div>
+                <p>以报纸形式整理幻想乡的报道与设定，收录大量插画与短篇，风格轻松幽默。</p>
+            </div>
+        </div>
+        <div class="book" id="bk12">
+            <img src="../image/bk12.jpg" alt="《东方幻存神签》封面">
+            <div>
+                <h3>东方幻存神签</h3>
+                <div class="book-meta">2025年4月1日 · 角川集团 · 设定资料集</div>
+                <p>以「御神签」的形式逐个介绍角色，附漫画与设定解说，是近年最新的官方设定集。</p>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="g-bk01">
+            <div class="section-head">
+                <h2>Fanbook 与画集</h2>
+                <span class="kana">Fanbooks</span>
+            </div>
+            <div class="books">
+        <div class="book" id="bk01">
+            <img src="../image/bk01.jpg" alt="《东方文花帖》封面">
+            <div>
+                <h3>东方文花帖</h3>
+                <div class="book-en">Aya Shameimaru's Newspaper</div>
+                <div class="book-meta">2005年8月11日 · 一迅社 · 合辑本</div>
+                <p>以「文文。新闻」的形式收录对幻想乡各角色的采访与报道，并附四格漫画、专栏与 ZUN 访谈，是了解幻想乡人情的第一手资料。</p>
+            </div>
+        </div>
+        <div class="book" id="bk04">
+            <img src="../image/bk04.jpg" alt="《魔理沙的魔法书》封面">
+            <div>
+                <h3>魔理沙的魔法书</h3>
+                <div class="book-en">The Grimoire of Marisa</div>
+                <div class="book-meta">2009年7月28日 · 一迅社 · 插画设定集</div>
+                <p>魔理沙整理的符卡图鉴，按作品收录各 BOSS 的符卡与 ZUN 的点评，兼具资料与吐槽的乐趣。</p>
+            </div>
+        </div>
+        <div class="book" id="bk09">
+            <img src="../image/bk09.jpg" alt="《东方Project人妖名鉴 宵暗篇》封面">
+            <div>
+                <h3>东方Project人妖名鉴 宵暗篇</h3>
+                <div class="book-meta">2020年3月27日 · 角川集团 · 插画设定集</div>
+                <p>以插画与解说介绍历代角色，宵暗篇收录前半部分角色，画集性质浓厚。</p>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="g-bk06">
+            <div class="section-head">
+                <h2>官方漫画</h2>
+                <span class="kana">Comics</span>
+            </div>
+            <div class="books">
+        <div class="book" id="bk06">
+            <img src="../image/bk06.jpg" alt="《东方茨歌仙》封面">
+            <div>
+                <h3>东方茨歌仙</h3>
+                <div class="book-en">Wild and Horned Hermit.</div>
+                <div class="book-meta">2011年6月27日 · 一迅社 · 漫画</div>
+                <p>以茨木华扇为主角的官方漫画，描绘幻想乡的日常与异变，连载时间长、角色众多。</p>
+            </div>
+        </div>
+        <div class="book" id="bk07">
+            <img src="../image/bk07.jpg" alt="《东方铃奈庵》封面">
+            <div>
+                <h3>东方铃奈庵</h3>
+                <div class="book-en">Forbidden Scrollery.</div>
+                <div class="book-meta">2013年3月26日 · 角川书店 · 漫画</div>
+                <p>以本居小铃与铃奈庵书店为中心，讲述「妖魔本」引发的种种事件，气氛悬疑而温柔。</p>
+            </div>
+        </div>
+        <div class="book" id="bk08">
+            <img src="../image/bk08.jpg" alt="《东方醉蝶华》封面">
+            <div>
+                <h3>东方醉蝶华</h3>
+                <div class="book-meta">2020年8月26日 · 角川集团 · 漫画</div>
+                <p>以居酒屋「鲵吞亭」的店花奥野田美宵为主角，围绕幻想乡的美酒与酒客展开一个个小故事。</p>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="g-bk10">
+            <div class="section-head">
+                <h2>官方杂志</h2>
+                <span class="kana">Magazine</span>
+            </div>
+            <div class="books">
+        <div class="book" id="bk10">
+            <img src="../image/bk10.jpg" alt="《东方外来韦编》封面">
+            <div>
+                <h3>东方外来韦编</h3>
+                <div class="book-en">Strange Creators of Outer World.</div>
+                <div class="book-meta">2015年9月30日 · 角川集团 · 杂志</div>
+                <p>官方不定期刊行的杂志，收录 ZUN 访谈、设定解说与二次创作漫画，是了解东方幕后故事的重要刊物。</p>
+            </div>
+        </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- ========== 背景音乐开关 ========== -->
+<button class="bgm-toggle" id="bgmToggle" type="button" aria-pressed="false" title="背景音乐开关">
+    <span class="bgm-icon">♪</span>
+    <span class="bgm-text">音乐</span>
+    <span class="bgm-switch"><i></i></span>
+</button>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+    <p>东方Project 幻想乡案内 · 网页设计作业作品</p>
+    <p>作品资料与封面图片参考自 <a href="https://thbwiki.cc/" target="_blank" rel="noopener">THBWiki</a>，版权归原作者 ZUN / 上海爱丽丝幻乐团 所有</p>
+    <p>背景音乐：《日陰と帽子と風鈴と》 ／ Foxtail-Grass Studio</p>
+    <p>本页面仅用于学习与交流</p>
+    <a class="to-top" href="#top">▲ 回到顶部</a>
+</footer>
+
+</body>
+</html>

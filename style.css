@@ -1,0 +1,1219 @@
+/* ============================================================
+   东方Project 幻想乡案内 · 样式表
+   配色：朱红 / 米白 / 墨色 / 金
+   ============================================================ */
+
+:root {
+    --red: #a8323f;
+    --red-deep: #76222e;
+    --red-soft: #d9a3a8;
+    --ink: #2b2422;
+    --ink-soft: #6a5f58;
+    --paper: #f8f3e8;
+    --paper-card: #fffdf7;
+    --gold: #b4925a;
+    --line: #e2d2bf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink);
+    background-color: var(--paper);
+    /* 和纸质感：细微的斜纹与斑点 */
+    background-image:
+        repeating-linear-gradient(45deg, rgba(180, 146, 90, 0.05) 0 1px, transparent 1px 9px),
+        radial-gradient(rgba(168, 50, 63, 0.05) 1px, transparent 1px);
+    background-size: auto, 18px 18px;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Yu Mincho", "游明朝", "Songti SC", "宋体", "SimSun", serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red-deep);
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- 页头 ---------- */
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(135deg, #a8323f 0%, #76222e 100%);
+    border-bottom: 3px solid var(--gold);
+}
+
+.site-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 26px);
+    pointer-events: none;
+}
+
+.header-inner {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 24px 0;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* 朱印 */
+.seal {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 30px;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-title {
+    font-size: 26px;
+    letter-spacing: 0.14em;
+}
+
+.brand-sub {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+.site-nav {
+    margin-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    display: block;
+    padding: 9px 16px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.current {
+    text-decoration: none;
+    border-bottom-color: var(--gold);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- 首屏 ---------- */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 76px 24px 66px;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(217, 163, 168, 0.35), transparent 46%),
+        radial-gradient(circle at 82% 78%, rgba(180, 146, 90, 0.28), transparent 48%),
+        #fffdf7;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 54px;
+    letter-spacing: 0.2em;
+    color: var(--red-deep);
+    text-indent: 0.2em;
+}
+
+.hero .hero-en {
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 0.42em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+}
+
+.hero .hero-lead {
+    max-width: 620px;
+    margin: 26px auto 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+}
+
+/* 竖排装饰文字 */
+.hero-vertical {
+    position: absolute;
+    top: 26px;
+    right: 38px;
+    writing-mode: vertical-rl;
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 13px;
+    letter-spacing: 0.34em;
+    color: rgba(118, 34, 46, 0.55);
+}
+
+.hero-divider {
+    width: 92px;
+    height: 1px;
+    margin: 30px auto 0;
+    background: var(--gold);
+    position: relative;
+}
+
+.hero-divider::before {
+    content: "❖";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    background: #fffdf7;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+/* 首屏封面墙 */
+.hero-covers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+}
+
+.hero-covers img {
+    height: 118px;
+    width: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 16px rgba(118, 34, 46, 0.18);
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+.hero-covers img:nth-child(even) {
+    transform: rotate(2.4deg);
+}
+
+.hero-covers img:hover {
+    transform: translateY(-6px) rotate(0deg);
+}
+
+/* 首屏小印章 */
+.hero-stamp {
+    display: inline-block;
+    margin-top: 34px;
+    padding: 6px 16px;
+    border: 1px solid var(--red-soft);
+    color: var(--red);
+    font-size: 12px;
+    letter-spacing: 0.24em;
+}
+
+/* ---------- 版面 ---------- */
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+main {
+    padding: 46px 0 70px;
+}
+
+.section {
+    margin-bottom: 58px;
+}
+
+.section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 12px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+}
+
+.section-head::before {
+    content: "";
+    width: 6px;
+    height: 26px;
+    background: var(--red);
+    align-self: center;
+    border-radius: 1px;
+}
+
+.section-head h2 {
+    font-size: 25px;
+    color: var(--red-deep);
+}
+
+.section-head .kana {
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+}
+
+/* 正文卡片 */
+.card {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 26px 28px;
+    box-shadow: 0 1px 0 rgba(118, 34, 46, 0.04);
+}
+
+.card + .card {
+    margin-top: 22px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: var(--red-deep);
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-size: 16px;
+    color: var(--ink);
+}
+
+.muted {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+}
+
+/* ---------- 三类作品的入口卡片 ---------- */
+
+.entry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.entry {
+    min-width: 0;
+    position: relative;
+    padding: 30px 26px 26px;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--red);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(118, 34, 46, 0.12);
+}
+
+.entry .num {
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 40px;
+    color: var(--red-soft);
+    line-height: 1;
+}
+
+.entry-thumb {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+    object-position: center 30%;
+    border: 1px solid var(--line);
+    margin-bottom: 16px;
+    filter: saturate(1.05);
+}
+
+/* 没有封面图的卡片（同人作品）用文字块代替 */
+.entry-thumb-plain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        repeating-linear-gradient(45deg, rgba(168, 50, 63, 0.07) 0 2px, transparent 2px 10px),
+        #faf1e6;
+}
+
+.entry-thumb-plain span {
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 17px;
+    letter-spacing: 0.3em;
+    color: var(--red-deep);
+    text-indent: 0.3em;
+}
+
+/* ---------- 同人作品页 ---------- */
+
+.dj-cover {
+    flex: 0 0 220px;
+    width: 220px;
+}
+
+.dj-cover img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 11 / 7;
+    object-fit: cover;
+}
+
+/* 类型标签用颜色区分动画 / 音乐 / 游戏 */
+.tag.tag-anime {
+    background: var(--red);
+}
+
+.tag.tag-music {
+    background: var(--gold);
+}
+
+.tag.tag-game {
+    background: #7c8b6f;
+}
+
+/* B 站跳转按钮 */
+.bili {
+    margin-top: 12px;
+}
+
+.bili a {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid var(--red-soft);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--red-deep);
+    background: #fffaf8;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.bili a:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+    text-decoration: none;
+}
+
+.dj-type {
+    flex: 0 0 168px;
+    width: 168px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    background: #faf4e9;
+}
+
+.dj-type span {
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 30px;
+    letter-spacing: 0.14em;
+    color: var(--red-deep);
+    text-indent: 0.14em;
+}
+
+.dj-type b {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+}
+
+.dj-anime {
+    border-top: 3px solid var(--red);
+}
+
+.dj-music {
+    border-top: 3px solid var(--gold);
+}
+
+.dj-game {
+    border-top: 3px solid #7c8b6f;
+}
+
+.entry h3 {
+    margin: 6px 0 8px;
+    font-size: 19px;
+}
+
+.entry h3 a {
+    color: var(--ink);
+}
+
+.entry h3 a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.entry p {
+    color: var(--ink-soft);
+    font-size: 14px;
+}
+
+.entry .go {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--red-soft);
+}
+
+/* ---------- 数据一览 ---------- */
+
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+}
+
+.facts li {
+    flex: 1 1 180px;
+    text-align: center;
+    padding: 20px 12px;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+}
+
+.facts strong {
+    display: block;
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 30px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+}
+
+.facts span {
+    font-size: 12.5px;
+    letter-spacing: 0.16em;
+    color: var(--ink-soft);
+}
+
+/* ---------- 年表 ---------- */
+
+.timeline {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+}
+
+.timeline td {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.timeline tr:last-child td {
+    border-bottom: none;
+}
+
+.timeline .tl-year {
+    width: 96px;
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 17px;
+    color: var(--red);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    border-right: 1px solid var(--line);
+    background: #faf4e9;
+}
+
+/* ---------- 面包屑与页标题 ---------- */
+
+.crumb {
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+}
+
+.page-title {
+    text-align: center;
+    padding: 34px 24px 26px;
+    background: #fffdf7;
+    border-bottom: 1px solid var(--line);
+}
+
+.page-title h1 {
+    font-size: 36px;
+    color: var(--red-deep);
+    letter-spacing: 0.18em;
+}
+
+.page-title p {
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    color: var(--ink-soft);
+}
+
+/* ---------- 本页目录 ---------- */
+
+.toc {
+    background: var(--paper-card);
+    border: 1px dashed var(--line);
+    padding: 18px 22px;
+    margin-bottom: 34px;
+}
+
+.toc h2 {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--red-deep);
+    margin-bottom: 10px;
+}
+
+.toc ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.toc a {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    border-bottom: 1px dotted var(--line);
+}
+
+.toc a:hover {
+    color: var(--red);
+    text-decoration: none;
+    border-bottom-color: var(--red-soft);
+}
+
+/* ---------- 作品条目 ---------- */
+
+.work {
+    display: flex;
+    gap: 26px;
+    padding: 24px;
+    margin-bottom: 24px;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    scroll-margin-top: 20px;
+}
+
+.work-cover {
+    flex: 0 0 168px;
+    width: 168px;
+}
+
+.work-cover img {
+    width: 100%;
+    border: 1px solid var(--line);
+    box-shadow: 3px 3px 0 rgba(118, 34, 46, 0.08);
+}
+
+.work-cover figcaption {
+    margin-top: 8px;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.work-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.work-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.work-head .tag {
+    font-family: "Yu Mincho", "Songti SC", serif;
+    font-size: 12px;
+    color: #fff;
+    background: var(--red);
+    padding: 2px 8px;
+    letter-spacing: 0.12em;
+}
+
+.work-head h3 {
+    font-size: 22px;
+    color: var(--red-deep);
+}
+
+.work-head .en {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    font-style: italic;
+}
+
+/* 作品信息表 */
+.meta {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 13.5px;
+}
+
+.meta th,
+.meta td {
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.meta th {
+    width: 92px;
+    white-space: nowrap;
+    background: #faf4e9;
+    color: var(--red-deep);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.work p {
+    font-size: 14.5px;
+    margin-bottom: 8px;
+}
+
+.label {
+    color: var(--red);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.chars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 12px;
+    list-style: none;
+}
+
+.chars li {
+    font-size: 12.5px;
+    padding: 1px 10px;
+    border: 1px solid var(--line);
+    background: #faf4e9;
+    color: var(--ink-soft);
+}
+
+/* ---------- 曲目表 ---------- */
+
+.tracks {
+    list-style: none;
+    counter-reset: track;
+    margin-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.tracks li {
+    position: relative;
+    counter-increment: track;
+    padding: 8px 0 8px 44px;
+    border-bottom: 1px dotted var(--line);
+    font-size: 13.5px;
+}
+
+.tracks li::before {
+    content: counter(track, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-family: "Yu Mincho", "Songti SC", serif;
+    color: var(--red-soft);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+}
+
+.tracks .t-name {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.tracks .t-jp {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+}
+
+.tracks .t-orig {
+    display: block;
+    font-size: 12px;
+    color: var(--gold);
+}
+
+.tracks .t-orig em {
+    font-style: normal;
+    color: var(--ink-soft);
+}
+
+.tracks .t-note {
+    display: block;
+    margin-top: 3px;
+    padding-left: 10px;
+    border-left: 2px solid #efe2cf;
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+}
+
+/* ---------- 书籍 ---------- */
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.book {
+    display: flex;
+    gap: 18px;
+    padding: 18px;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    scroll-margin-top: 20px;
+}
+
+.book img {
+    width: 108px;
+    flex: 0 0 108px;
+    border: 1px solid var(--line);
+    align-self: flex-start;
+}
+
+.book h3 {
+    font-size: 16px;
+    color: var(--red-deep);
+    margin-bottom: 2px;
+}
+
+.book .book-en {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.book .book-meta {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 4px 0;
+    margin-bottom: 8px;
+}
+
+.book p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ---------- 提示条 ---------- */
+
+.note {
+    border-left: 3px solid var(--gold);
+    background: #fdf8ee;
+    padding: 12px 18px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 18px 0 26px;
+}
+
+/* ---------- 页脚 ---------- */
+
+.site-footer {
+    background: #2b2422;
+    color: #cdbfb2;
+    padding: 34px 24px;
+    text-align: center;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    border-top: 3px solid var(--gold);
+}
+
+.site-footer a {
+    color: #e8c9a8;
+}
+
+.site-footer p + p {
+    margin-top: 6px;
+}
+
+.to-top {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 14px;
+    border: 1px solid #6a5f58;
+    color: #e8c9a8;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+}
+
+.to-top:hover {
+    text-decoration: none;
+    background: #3a302c;
+}
+
+/* ---------- 背景音乐开关 ---------- */
+
+.bgm-toggle {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 14px 8px 12px;
+    font-family: inherit;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(118, 34, 46, 0.14);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.bgm-toggle:hover {
+    color: var(--red-deep);
+    border-color: var(--red-soft);
+}
+
+.bgm-toggle:focus-visible {
+    outline: 2px solid var(--red-soft);
+    outline-offset: 2px;
+}
+
+.bgm-icon {
+    color: var(--red);
+    font-size: 15px;
+    line-height: 1;
+}
+
+.bgm-toggle.is-on .bgm-icon {
+    animation: bgm-pulse 1.9s ease-in-out infinite;
+}
+
+@keyframes bgm-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+.bgm-switch {
+    position: relative;
+    width: 34px;
+    height: 18px;
+    border-radius: 999px;
+    background: #d9cbb8;
+    transition: background-color 0.2s;
+}
+
+.bgm-switch i {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.22s;
+}
+
+.bgm-toggle.is-on .bgm-switch {
+    background: var(--red);
+}
+
+/* 等待用户点击：轻轻呼吸，提示「这里可以点」 */
+.bgm-toggle.is-wait {
+    border-color: var(--red-soft);
+    color: var(--red-deep);
+}
+
+.bgm-toggle.is-wait .bgm-icon {
+    animation: bgm-pulse 1.4s ease-in-out infinite;
+}
+
+.bgm-toggle.is-on .bgm-switch i {
+    transform: translateX(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bgm-toggle.is-on .bgm-icon {
+        animation: none;
+    }
+}
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 1080px) {
+    .entry-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .entry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .books {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-covers img {
+        height: 88px;
+    }
+
+    .entry-thumb {
+        height: 150px;
+        object-position: center;
+    }
+}
+
+@media (max-width: 820px) {
+    .header-inner {
+        padding: 18px;
+    }
+
+    .site-nav {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .site-nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: 0.12em;
+    }
+
+    .hero-vertical {
+        display: none;
+    }
+
+    .work {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .work-cover {
+        flex-basis: auto;
+        width: 150px;
+    }
+
+    .dj-type {
+        flex: 1 1 auto;
+        width: auto;
+        min-height: 0;
+        flex-direction: row;
+        gap: 12px;
+        padding: 10px 16px;
+    }
+
+    .dj-type span {
+        font-size: 20px;
+    }
+
+    .book {
+        flex: 1 1 100%;
+    }
+
+    .page-title h1 {
+        font-size: 27px;
+    }
+
+    .bgm-toggle {
+        right: 12px;
+        bottom: 12px;
+        gap: 7px;
+        padding: 7px 12px 7px 10px;
+        font-size: 12px;
+    }
+}
+
+/* ---------- 站内搜索 ---------- */
+
+.search {
+    position: relative;
+    margin-left: auto;
+    align-self: center;
+}
+
+.search input[type="search"] {
+    width: 220px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    outline: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.search input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.search input[type="search"]:focus {
+    background: var(--paper-card);
+    color: var(--ink);
+    border-color: var(--paper-card);
+}
+
+.search input[type="search"]::-webkit-search-cancel-button {
+    filter: invert(1);
+}
+
+.search input[type="search"]:focus::-webkit-search-cancel-button {
+    filter: none;
+}
+
+.search-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    width: 400px;
+    max-height: 400px;
+    overflow: auto;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(43, 36, 34, 0.2);
+    z-index: 40;
+}
+
+.search-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+}
+
+.search-panel li a {
+    display: block;
+    padding: 9px 10px;
+    border-radius: 3px;
+}
+
+.search-panel li a:hover,
+.search-panel li.is-active a {
+    background: #f7efe4;
+    text-decoration: none;
+}
+
+.sr-cat {
+    display: inline-block;
+    min-width: 3.4em;
+    text-align: center;
+    font-size: 11.5px;
+    color: #fff;
+    background: var(--red-soft);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 8px;
+    vertical-align: 1px;
+}
+
+.sr-title {
+    font-size: 14px;
+    color: var(--ink);
+}
+
+.sr-sub {
+    display: block;
+    margin: 2px 0 0 calc(3.4em + 16px);
+    font-size: 12px;
+    color: var(--ink-soft);
+}
+
+.search-panel mark {
+    background: #ffe6a8;
+    color: inherit;
+    padding: 0 1px;
+}
+
+.search-empty {
+    padding: 12px 12px 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 820px) {
+    .brand-row {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        width: 100%;
+        margin: 10px 0 0;
+    }
+
+    .search input[type="search"] {
+        width: 100%;
+    }
+
+    .search-panel {
+        width: 100%;
+        left: 0;
+        right: auto;
+    }
+}
