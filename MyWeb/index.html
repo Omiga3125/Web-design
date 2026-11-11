@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>东方Project 幻想乡案内</title>
+<!-- 背景音乐：放在 head 里，页面还没渲染就先起播，切页时的停顿最短 -->
+<script src="bgm.js"></script>
+<!-- 站内搜索：索引 + 交互 -->
+<script src="search-data.js" defer></script>
+<script src="search.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== 页头 ========== -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand-row">
+            <div class="seal">东</div>
+            <div>
+                <div class="brand-title">东方Project 幻想乡案内</div>
+                <div class="brand-sub">Touhou Project Guide</div>
+            </div>
+            <div class="search">
+                <input id="siteSearch" type="search" placeholder="搜索作品 / 专辑 / 曲目"
+                       autocomplete="off" aria-label="站内搜索">
+                <div class="search-panel" id="searchPanel" hidden>
+                    <ul id="searchResults"></ul>
+                </div>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+        <li><a href="index.html" class="current">首页</a></li>
+        <li><a href="web/games.html">弹幕射击游戏</a></li>
+        <li><a href="web/musiccd.html">秘封俱乐部音乐CD</a></li>
+        <li><a href="web/books.html">官方书籍</a></li>
+        <li><a href="web/doujin.html">同人作品</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main id="top">
+    <!-- ========== 首屏 ========== -->
+    <section class="hero">
+        <div class="hero-vertical">幻想乡案内 · 东方Project</div>
+        <h1>东方Project</h1>
+        <p class="hero-en">Touhou Project</p>
+        <div class="hero-divider"></div>
+        <p class="hero-lead">
+            一个由 ZUN 独自创作的同人游戏系列。<br>
+            弹幕、音乐、妖怪与少女，构成了一个名为「幻想乡」的世界。
+        </p>
+        <div class="hero-covers">
+            <img src="image/th06.jpg" alt="东方系列封面">
+            <img src="image/th10.jpg" alt="东方系列封面">
+            <img src="image/th15.jpg" alt="东方系列封面">
+            <img src="image/cd01.jpg" alt="东方系列封面">
+            <img src="image/cd04.jpg" alt="东方系列封面">
+        </div>
+        <span class="hero-stamp">上海爱丽丝幻乐团</span>
+    </section>
+
+    <div class="container">
+        <!-- ========== 一、总体概括 ========== -->
+        <section class="section" id="about">
+            <div class="section-head">
+                <h2>什么是东方Project</h2>
+                <span class="kana">About</span>
+            </div>
+
+            <div class="card">
+                <h3>一个人的同人王国</h3>
+                <p>
+                    东方Project（東方Project）是日本同人创作者 <strong>ZUN</strong>（太田顺也）
+                    以社团「上海爱丽丝幻乐团」名义制作的系列作品。它始于 1996 年的
+                    《东方灵异传》，最初只是 PC-98 平台上的几款弹幕射击游戏；
+                    2002 年《东方红魔乡》登陆 Windows 后，系列迅速聚集起庞大的爱好者群体。
+                </p>
+                <p>
+                    与商业游戏不同，东方几乎由 ZUN 一人完成企划、剧本、程序与全部音乐。
+                    这种「个人创作」的气质，加上高自由度的二次创作规约，
+                    让东方成为日本同人文化中最具代表性的作品之一。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>幻想乡：人与妖怪共存之地</h3>
+                <p>
+                    故事发生在被结界与外界隔绝的「幻想乡」。那里居住着妖怪、妖精、神明与人类，
+                    维持秩序的是博丽神社的巫女<strong>博丽灵梦</strong>和普通的魔法使
+                    <strong>雾雨魔理沙</strong>。每当幻想乡出现异变，她们便出发调查，
+                    一路击败形形色色的妖怪少女，最终查明幕后黑手。
+                </p>
+                <p class="muted">
+                    游戏中的「异变」多以季节、月亮、花、信仰等自然与民俗题材为线索，
+                    这也让东方带有浓厚的和风与神话色彩。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>玩法与音乐</h3>
+                <p>
+                    正作以「弹幕射击」（Danmaku Shooting）为核心：玩家操控自机在密集的弹幕间穿行，
+                    用射击与 BOMB 击破 BOSS，同时收集分数道具。
+                    BOSS 的每一招都有名字，称为<strong>符卡</strong>（Spell Card），
+                    名字本身就是剧情与角色性格的注脚。
+                </p>
+                <p>
+                    音乐是东方的另一根支柱。每部作品的原声都由 ZUN 作曲，
+                    旋律性强、辨识度高，后来衍生出规模巨大的同人音乐圈，
+                    这也是东方生命力长久的重要原因。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>影响力</h3>
+                <p>
+                    东方常与「VOCALOID」「偶像大师」并称为日本网络同人文化的代表。
+                    每年举办的「博丽神社例大祭」是规模最大的东方同人展会；
+                    同人音乐、漫画、动画、游戏与 Cosplay 构成了庞大的二次创作生态，
+                    在中国、欧美等地也拥有稳定的爱好者社群。
+                </p>
+                <p class="muted">
+                    前三类是官方作品，「同人作品」一栏单独介绍二次创作，两类内容在页面上分开标注。
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== 二、三类作品的入口 ========== -->
+        <section class="section" id="catalog">
+            <div class="section-head">
+                <h2>作品分类</h2>
+                <span class="kana">Catalog</span>
+            </div>
+            <div class="entry-grid">
+        <div class="entry">
+            <img class="entry-thumb" src="image/th06.jpg" alt="弹幕射击游戏">
+            <div class="num">壹</div>
+            <h3><a href="web/games.html">弹幕射击游戏</a></h3>
+            <p>东方系列的主体。从《东方红魔乡》到《东方锦上京》，共 15 部 Windows 整数作，每一部都有独立的故事、角色与系统。</p>
+            <a class="go" href="web/games.html">进入分类 →</a>
+        </div>
+        <div class="entry">
+            <img class="entry-thumb" src="image/cd01.jpg" alt="秘封俱乐部音乐CD">
+            <div class="num">贰</div>
+            <h3><a href="web/musiccd.html">秘封俱乐部音乐CD</a></h3>
+            <p>ZUN 亲自创作的音乐专辑。以梅莉与莲子两位少女的「秘封俱乐部」串起故事，收录改编自游戏原曲的曲目。</p>
+            <a class="go" href="web/musiccd.html">进入分类 →</a>
+        </div>
+        <div class="entry">
+            <img class="entry-thumb" src="image/bk02.jpg" alt="官方书籍出版物">
+            <div class="num">参</div>
+            <h3><a href="web/books.html">官方书籍出版物</a></h3>
+            <p>设定资料集、Fanbook、画集与官方漫画。它们补充了游戏之外的世界观、角色日常与幕后故事。</p>
+            <a class="go" href="web/books.html">进入分类 →</a>
+        </div>
+        <div class="entry">
+            <div class="entry-thumb entry-thumb-plain"><span>二次创作</span></div>
+            <div class="num">肆</div>
+            <h3><a href="web/doujin.html">同人作品</a></h3>
+            <p>由爱好者创作、并在圈内外都产生过影响的二次创作：同人动画、同人音乐、同人游戏……这一栏与前三类的性质不同，单独说明。</p>
+            <a class="go" href="web/doujin.html">进入分类 →</a>
+        </div>
+            </div>
+        </section>
+
+        <!-- ========== 三、数据一览 ========== -->
+        <section class="section" id="facts">
+            <div class="section-head">
+                <h2>数字里的东方</h2>
+                <span class="kana">Facts</span>
+            </div>
+            <ul class="facts">
+                <li><strong>15</strong><span>Windows 整数作</span></li>
+                <li><strong>12</strong><span>秘封俱乐部音乐CD</span></li>
+                <li><strong>11</strong><span>官方书籍（本站收录）</span></li>
+                <li><strong>6</strong><span>同人作品（精选）</span></li>
+                <li><strong>1996</strong><span>系列起点</span></li>
+            </ul>
+        </section>
+
+        <!-- ========== 四、简略年表 ========== -->
+        <section class="section" id="timeline">
+            <div class="section-head">
+                <h2>简略年表</h2>
+                <span class="kana">Timeline</span>
+            </div>
+            <table class="timeline">
+            <tr><td class="tl-year">1996</td><td>《东方灵异传》发表，系列在 PC-98 上起步</td></tr>
+            <tr><td class="tl-year">2002</td><td>《东方红魔乡》登陆 Windows，系列迎来转折</td></tr>
+            <tr><td class="tl-year">2003</td><td>首张「秘封俱乐部」音乐 CD《莲台野夜行》发售</td></tr>
+            <tr><td class="tl-year">2005</td><td>《东方文花帖》等官方书籍开始陆续出版</td></tr>
+            <tr><td class="tl-year">2010s</td><td>同人创作爆发，例大祭与二次创作形成庞大社群</td></tr>
+            <tr><td class="tl-year">2023</td><td>《东方兽王园》发售，系列仍在持续更新</td></tr>
+            </table>
+        </section>
+    </div>
+</main>
+<!-- ========== 背景音乐开关 ========== -->
+<button class="bgm-toggle" id="bgmToggle" type="button" aria-pressed="false" title="背景音乐开关">
+    <span class="bgm-icon">♪</span>
+    <span class="bgm-text">音乐</span>
+    <span class="bgm-switch"><i></i></span>
+</button>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+    <p>东方Project 幻想乡案内 · 网页设计作业作品</p>
+    <p>作品资料与封面图片参考自 <a href="https://thbwiki.cc/" target="_blank" rel="noopener">THBWiki</a>，版权归原作者 ZUN / 上海爱丽丝幻乐团 所有</p>
+    <p>背景音乐：《日陰と帽子と風鈴と》 ／ Foxtail-Grass Studio</p>
+    <p>本页面仅用于学习与交流</p>
+    <a class="to-top" href="#top">▲ 回到顶部</a>
+</footer>
+
+</body>
+</html>
